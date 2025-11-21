@@ -104,6 +104,26 @@
     <!-- Liste des cartes -->
     <div id="cardList" class="row g-4"></div>
 
+    <div class="modal fade" id="fableModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content shadow-lg rounded">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="fableModalTitle"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="fableModalBody">
+        <p id="fableTexte"></p>
+        <hr>
+        <p><strong>Morale :</strong> <span id="fableMorale"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <!-- Pagination bootstrap -->
     <nav class="mt-4">
       <ul id="pagination" class="pagination justify-content-center"></ul>
