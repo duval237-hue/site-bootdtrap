@@ -83,7 +83,7 @@
           <div class="col-md-4">
             <div class="card shadow-sm h-100">
                 <img src="${story.img}" class="card-img-top" alt="${story.title}">
-                <div class="card-body text-center">
+                <div class="card-body">
                      <h5 class="card-title text-primary fw-bold">${story.title}</h5>
                      <p class="card-text text-dark">${story.summary}</p>
                     <a href="${story.video}"class="btn btn-sm btn-outline-primary ">
