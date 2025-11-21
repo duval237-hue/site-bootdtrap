@@ -4,13 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mini youtube</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
     <!-- navbar -->
- <nav class="navbar navbar-expand-lg bg-primary active p-3 fixed-top">
+ <nav class="navbar navbar-expand-lg bg-primary active p-3 fixed-top"  style="background: linear-gradient(135deg, #141e30, #216bc0);">
   <div class="container ">
     <a class="navbar-brand fw-bold text-danger" href="#"><i class="bi bi-book-half"></i> DuvalStories</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
@@ -28,15 +27,15 @@
   </div>
 </nav>
   <!-- Offcanvas (mobile) -->
-  <div class="offcanvas offcanvas-end  w-75" tabindex="-1" id="offcanvasMenu">
+  <div class="offcanvas offcanvas-end  w-75" tabindex="-1" id="offcanvasMenu"  style="background: linear-gradient(135deg, #141e30, #216bc0);">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title text-white">Menu</h5>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link text-white" href="index.html"> <i class="bi bi-house"></i> Accueil</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="./apropos.html"> <i class="bi bi-claude"></i> Apropos</a></li>       
+        <li class="nav-item"><a class="nav-link text-white" href="index.html"><i class="bi bi-house"></i> Accueil</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="./apropos.html"><i class="bi bi-claude"></i> Apropos</a></li>       
       
         <li class="nav-item"><a class="nav-link text-white" href="./contact.html">  <i class="bi bi-telephone text-primary"></i> Contact</a></li>
       </ul>
@@ -91,29 +90,87 @@
     </div>
    </div>
 
+       <!-- ESPACE POUR NE PAS ÊTRE CACHÉ PAR LA NAVBAR -->
+    <div style="margin-top: 90px;"></div>
 
-  
-     <div class="container py-4">
+    <!-- CONTENU À PROPOS -->
+    <div class="container py-5" style="max-width: 900px;">
+        
+        <h1 class="text-center fw-bold mb-4">À propos – Duval Stories</h1>
 
-    <!-- Barre de recherche -->
-    <div class="input-group mb-5 recherche">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input id="searchInput" type="text" class="form-control p-3" placeholder="Recherchez une fable...">
+        <p class="lead">
+            <strong>Duval Stories</strong> est une plateforme dédiée aux fables africaines modernes,
+            aux récits inspirants et aux histoires éducatives pour tous les âges.
+        </p>
+
+        <p>
+            Notre mission est de transmettre des valeurs, inspirer les jeunes générations et proposer des histoires riches en morale,
+            en courage, en sagesse et en inspiration.
+        </p>
+
+        <h4 class="fw-bold mt-4">Nos Objectifs</h4>
+        <ul>
+            <li>Promouvoir la culture à travers des récits captivants</li>
+            <li>Inspirer avec des histoires motivantes</li>
+            <li>Transmettre des valeurs fortes ☀️</li>
+            <li>Proposer des fables en texte et en vidéo</li>
+        </ul>
+
+        <h4 class="fw-bold mt-4">Ce que vous trouverez sur Duval Stories</h4>
+        <ul>
+            <li>Fables inspirantes</li>
+            <li>Histoires Premium</li>
+            <li>Vidéos éducatives</li>
+            <li>Catégories : Amitié, Trahison, Amour, Vengeance, Sagesse…</li>
+        </ul>
+
+        <hr class="my-4">
+
+        <!-- CONDITIONS D'UTILISATION -->
+        <h4 class="fw-bold">⚠️ Conditions d'utilisation</h4>
+
+        <p>
+            En utilisant notre plateforme, vous acceptez les règles suivantes :
+        </p>
+
+        <ul>
+            <li>Ne pas republier les histoires sans autorisation</li>
+            <li>Ne pas utiliser le contenu à des fins commerciales sans accord</li>
+            <li>Respecter les autres membres</li>
+            <li>Accepter que certaines histoires soient Premium</li>
+        </ul>
+
+        <div class="form-check mt-3">
+            <input type="checkbox" class="form-check-input" id="acceptTerms">
+            <label class="form-check-label" for="acceptTerms">
+                J’accepte les <strong>conditions d’utilisation</strong>.
+            </label>
+        </div>
+
+        <p id="errorTerms" class="text-danger fw-bold d-none mt-2">
+            Vous devez accepter les conditions avant de continuer.
+        </p>
+
     </div>
 
-    <!-- Liste des cartes -->
-    <div id="cardList" class="row g-4"></div>
 
-    <!-- Pagination bootstrap -->
-    <nav class="mt-4">
-      <ul id="pagination" class="pagination justify-content-center"></ul>
-    </nav>
-  </div>
 
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-      © 2025 DuvalStories | Inspirer par la sagesse des fables
-  </footer>
-    <script src="index.js"></script>
+    <!-- BOUTON RETOUR EN BAS FIXE -->
+    <button id="btnRetour" class="btn btn-dark px-4 py-2 shadow-lg"
+        style="
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 40px;
+            z-index: 9999;
+        ">
+        ⬅ Retour à l'accueil
+    </button>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
